@@ -1,0 +1,22 @@
+.label {
+  cursor: pointer;
+  user-select: none;
+}
+
+.date {
+  max-width: 120px;
+}
+
+.cell {
+  display: flex;
+  flex-direction: row;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.labels {
+  margin-top: 5px;
+}

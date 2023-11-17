@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { ClarityModule } from '@clr/angular';
+import { LectureModule } from './lecture/lecture.module';
 
 @NgModule({
   declarations: [
@@ -12,9 +14,11 @@ import { ClarityModule } from '@clr/angular';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     RouterModule,
     ClarityModule,
+    LectureModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

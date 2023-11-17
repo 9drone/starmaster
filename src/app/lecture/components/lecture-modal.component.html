@@ -1,0 +1,8 @@
+<clr-modal *ngIf="!!lecture" [clrModalOpen]="!!lecture" (clrModalOpenChange)="onModalClose()" [clrModalSize]="'xl'" [clrModalStaticBackdrop]="false">
+  <h3 class="modal-title">{{ lecture.title }}</h3>
+  <div class="modal-body">
+    <div class="video">
+      <iframe width="100%" height="100%" [src]="getVideo(lecture.src)" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+</clr-modal>

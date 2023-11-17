@@ -1,0 +1,31 @@
+
+<div class="filters">
+  <ng-container *ngFor="let filter of filters">
+    <span class="label" [ngClass]="lectureService.activeFilter.includes(filter) ? labelClassMap[labelsMap[filter].type] : ''" (click)="toggleFilter(filter)">{{ labelsMap[filter].name }}</span>
+  </ng-container>
+</div>
+<clr-datagrid>
+  <clr-dg-column class="title">강의</clr-dg-column>
+  <clr-dg-column class="date">날짜</clr-dg-column>
+
+  <clr-dg-row *clrDgItems="let lecture of lectureList" [clrDgItem]="lecture" (click)="selectLecture(lecture)">
+    <clr-dg-cell>
+      <div class="cell">
+        <div class="thumbnail">
+        </div>
+        <div class="text">
+          <div class="title">{{ lecture.title }}</div>
+          <div class="labels">
+            <ng-container *ngFor="let label of lecture.labels">
+              <span class="label" [ngClass]="labelClassMap[labelsMap[label].type]">{{ labelsMap[label].name }}</span>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </clr-dg-cell>
+    <clr-dg-cell class="date">{{ lecture.date | date: 'YYYY-MM-dd' }}</clr-dg-cell>
+  </clr-dg-row>
+  <clr-dg-footer>
+    <clr-dg-pagination #pagination [clrDgPageSize]="10"></clr-dg-pagination>
+  </clr-dg-footer>
+</clr-datagrid>
