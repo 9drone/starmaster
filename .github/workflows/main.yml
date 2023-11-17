@@ -19,5 +19,5 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        npm install
+        npm install --force
         npm run ng -- deploy
