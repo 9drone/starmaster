@@ -1,5 +1,6 @@
 export interface Teacher {
   id: string;
+  banner: string;
   lectures: Lecture[];
 }
 

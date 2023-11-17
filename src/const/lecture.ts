@@ -1,6 +1,6 @@
-import { Label, Lecture, TYPE } from "../app/lecture/models/lecture.model";
+import { Label, Lecture, Teacher, TYPE } from "../app/lecture/models/lecture.model";
 
-export const ZELOT: Lecture[] = [
+export const ZELOT_LECTURES: Lecture[] = [
   {
     id: "1",
     title: "토스전 973 vs 게이트 더블 강의",
@@ -23,6 +23,12 @@ export const ZELOT: Lecture[] = [
     labels: ["1500", "Z", "vsP", "overpool", "vsGateway", "3hatcheryZergling", "butter"],
   },
 ];
+
+export const ZELOT: Teacher = {
+  id: "zelot",
+  banner: "assets/images/zelot.jpg",
+  lectures: ZELOT_LECTURES,
+}
 
 export const LABELS: Label[] = [
   {

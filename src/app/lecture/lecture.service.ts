@@ -11,13 +11,13 @@ export class LectureService {
 
   loadLectures() {
     if (this.activeFilter.length) {
-      return ZELOT.filter((lecture) => {
+      return ZELOT.lectures.filter((lecture) => {
         return this.activeFilter.every((filter) => {
           return lecture.labels.includes(filter);
         });
       });
     }
-    return ZELOT;
+    return ZELOT.lectures;
   }
 
   loadLabels() {

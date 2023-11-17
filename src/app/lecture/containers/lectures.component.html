@@ -1,4 +1,5 @@
 <div class="wrapper">
+  <app-lecture-banner class="banner"></app-lecture-banner>
   <app-lecture-list class="grid" (select)="selectLecture($event)"></app-lecture-list>
 </div>
 <app-lecture-modal [lecture]="selected" (close)="closeLecture()"></app-lecture-modal>
