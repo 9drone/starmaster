@@ -36,4 +36,15 @@ export class LectureListComponent implements OnInit {
     }
     this.lectureList = this.lectureService.loadLectures();
   }
+
+  getThumbnail(lecture: Lecture) {
+    if (lecture.labels.includes("vsP")) {
+      return "assets/protoss.webp";
+    } else if (lecture.labels.includes("vsT")) {
+      return "assets/terran.webp";
+    } else if (lecture.labels.includes("vsZ")) {
+      return "assets/zerg.webp";
+    }
+    return "";
+  }
 }

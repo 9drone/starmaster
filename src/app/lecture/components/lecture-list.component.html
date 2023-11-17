@@ -5,13 +5,14 @@
   </ng-container>
 </div>
 <clr-datagrid>
-  <clr-dg-column class="title">강의</clr-dg-column>
+  <clr-dg-column>강의</clr-dg-column>
   <clr-dg-column class="date">날짜</clr-dg-column>
 
-  <clr-dg-row *clrDgItems="let lecture of lectureList" [clrDgItem]="lecture" (click)="selectLecture(lecture)">
+  <clr-dg-row class="row" *clrDgItems="let lecture of lectureList" [clrDgItem]="lecture" (click)="selectLecture(lecture)">
     <clr-dg-cell>
       <div class="cell">
         <div class="thumbnail">
+          <img [src]="getThumbnail(lecture)">
         </div>
         <div class="text">
           <div class="title">{{ lecture.title }}</div>
